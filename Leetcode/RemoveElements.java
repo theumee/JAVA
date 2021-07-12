@@ -29,7 +29,7 @@ public class RemoveElements {
             }
             return flag;
         }
-        return 0;
+        return 0; // Empty array
 
     }
 
