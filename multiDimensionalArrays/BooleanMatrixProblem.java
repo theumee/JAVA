@@ -24,17 +24,12 @@ class BooleanMatrixProblem {
                     arr[i][j] = sc.nextInt();
 
             for(int i = 0 ; i < m ; i++){
-                boolean flag = false;
-                for(int j =0 ; j < n ; j++){
-                    if(arr[i][j] == 1){
-                        flag = true;
+                for(int j =0 ; j < n ; j++) {
+                    if (arr[i][j] == 1) {
+                        for (int k = 0; k < n; k++) {
+                            arr[i][k] = 1;
+                        }
                         break;
-                    }
-
-                }
-                if(flag){
-                    for(int j = 0 ; j < n ; j++ ){
-                        arr[i][j] = 1;
                     }
                 }
             }
@@ -45,7 +40,6 @@ class BooleanMatrixProblem {
                     System.out.print(arr[i][j] + " ");
                 System.out.println();
             }
-
 
         }
 
