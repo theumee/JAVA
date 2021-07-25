@@ -1,3 +1,5 @@
+package JAVA.SPOJ;
+
 import java.util.Scanner;
 
 public class NextPalindrome {

@@ -1,9 +1,11 @@
+package JAVA;
+
 import java.io.*; // for handling input/output
 import java.util.*; // contains Collections framework
 
 // don't change the name of this class
 // you can add inner classes if needed
-class Main {
+class power {
     public static double pow(double n, int x){
         if( x == 1 )
             return n;

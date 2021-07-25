@@ -3,10 +3,13 @@ package JAVA.Leetcode;
 
 class S3 {
     public int mySqrt(int x) {
-        for(int i = 0 ; i <= x/2;i++){
+        if(x < 4 && x > 0)
+            return 1;
+
+        for(int i = 2 ;  i <= (x/2)+1 ; i++){
             if(i*i == x)
                 return i;
-            if(i*i > x)
+            if(i*i > x || i*i < 0)
                 return i-1;
         }
         return 0;
