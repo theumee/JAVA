@@ -1,4 +1,4 @@
-package StringManipulation;
+package JAVA.StringManipulation;
 
 import java.util.*;
 public class revString {
@@ -9,11 +9,11 @@ public class revString {
         int begin = 0;
         int end = strlen - 1;
         int mid = (int)Math.ceil(strlen/2);
-        char[] arr = new char[strlen];
+        char[] arr = str.toCharArray();
 
-        for(int i = 0 ; i < strlen ; i++ ){
-            arr[i] = str.charAt(i);
-        }
+//        for(int i = 0 ; i < strlen ; i++ ){
+//            arr[i] = str.charAt(i);
+//        }
 
         while(begin < mid){
             char tmp;
