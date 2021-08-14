@@ -12,9 +12,9 @@ public class Queue {
     public void enQueue(int data){
         if(!isFull()) {
             arr[rear] = data;
-            rear = (rear + 1) % 6;                // using the mod of size (of array) operation we make this a circular queue(K.O.) also below in front <-|
-            size++;                                 // and also while printing
-        }else {
+            rear = (rear + 1) % 6;
+            size++;
+            }else {
             System.out.println("Queue is FULL!");
         }
     }

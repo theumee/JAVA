@@ -24,18 +24,18 @@ public class GreaterFrequncy {
                 hm.put(i, val+1);
             }
 
-            int[] newArr = new int[len];
+//            int[] newArr = new int[len];
             for(int i = 0 ; i < len - 1 ; i++){
                     for(int j = i+1 ; j < len ; j++) {
                         if (hm.get(arr[j]) > hm.get(arr[i])) {
-                            newArr[i] = arr[j];
+                            arr[i] = arr[j];
                             break;
                         }
-                        newArr[i] = -1;
+                        arr[i] = -1;
                     }
                 }
-            newArr[len-1] = -1;
-            for(int val : newArr)
+            arr[len-1] = -1;
+            for(int val : arr)
                 System.out.print(val + " ");
     }
 

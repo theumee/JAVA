@@ -1,4 +1,4 @@
-package JAVA.BasicDS;
+package JAVA.BasicDS.Stacks;
 
 
 import java.util.Collections;
@@ -36,6 +36,12 @@ public class Stacks {
         System.out.print("1-Based distance of " + n + " from the top Element of stack: ");
         System.out.println(stk.search(n) );
 
+        Stack<Integer> tmp = stk;
+        Collections.reverse(tmp);
+
+        System.out.println(tmp.peek());
+        System.out.println(tmp.pop());
+        System.out.println(tmp.peek());
 
 
     }

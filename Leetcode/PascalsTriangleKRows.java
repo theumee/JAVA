@@ -4,33 +4,59 @@ import java.util.*;
 
 
 class S4 {
-    static int fact(int n){
-        if(n < 2)
-            return 1;
-        int fact = 1;
-        for(int i = n ; i > 1 ; i--){
-            fact *= i;
-        }
-        return fact;
-    }
+//    static int fact(int n){
+//        if(n < 2)
+//            return 1;
+//        int fact = 1;
+//        for(int i = n ; i > 1 ; i--){
+//            fact *= i;
+//        }
+//        return fact;
+//    }
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> lili = new ArrayList<>();
+//        List<List<Integer>> lili = new ArrayList<>();
+//
+//        int[] arr = {1,2,4};
+//        int j = 0;
+//        while( j < numRows) {
+//            List<Integer> li = new ArrayList<>();
+//            for (int i = 0; i <= j; i++) {
+//                int comb = fact(j) / (fact(i) * fact(j - i));
+//                li.add(comb);
+//            }
+//            lili.add(li);
+//        }
+//        return lili;
 
-        int[] arr = {1,2,4};
-        int j = 0;
-        while( j < numRows) {
-            List<Integer> li = new ArrayList<>();
-            for (int i = 0; i <= j; i++) {
-                int comb = fact(j) / (fact(i) * fact(j - i));
-                li.add(comb);
+        List<List<Integer>> triangle = new ArrayList<>();
+
+        if(numRows == 0 ) return triangle;
+        List<Integer> first_row = new ArrayList<>();
+        first_row.add(1);
+        triangle.add(first_row);
+
+        for(int i = 1 ; i < numRows ; i++){
+            List<Integer> prev_row = triangle.get(i-1);
+            List<Integer> curr_row = new ArrayList<>();
+
+            curr_row.add(1);
+
+            for(int j = 1 ; j < i; j++){
+                curr_row.add(prev_row.get(j-1) + prev_row.get(j));
             }
-            lili.add(li);
-        }
-        return lili;
 
+            curr_row.add(1);
+            triangle.add(curr_row);
+        }
+
+        return triangle;
     }
 }
 public class PascalsTriangleKRows {
+    public static void main(String[] args) {
+        S4 s = new S4();
+        System.out.print(s.generate(5));
+    }
 }
 
 
