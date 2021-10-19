@@ -3,12 +3,26 @@ package JAVA.BasicDS.LinkedLists;
 class Node{
     int data;
     Node next;
-    private Object val;
 }
 public class LinkedList {
     Node head;
 
-    void insert(int data){
+    public Node mergeTwoLists(Node l1, Node l2) {
+        Node i = l1;
+        Node j = l2;
+
+        while(i.next != null && j.next != null){
+            if(i.data <= j.data){
+                i.next = j.next;
+                j.next = i;
+            }
+            j = j.next;
+        }
+        j.next = i;
+        return l2;
+    }
+
+    Node insert(int data){
         Node node = new Node();
         node.data = data;
         node.next = null;
@@ -23,6 +37,7 @@ public class LinkedList {
             }
             n.next = node;
         }
+        return node;
     }
     void show(){
         Node node = head;
@@ -84,16 +99,26 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-        ll.insert(15);
-        ll.insert(45);
-        ll.insert(54);
-        ll.size();
+//        Node l1 = ll.insert(1);
+//        ll.insert(2);
+//        ll.insert(4);
+//        Node l2 = ll.insert(1);
+//        ll.insert(3);
+//        ll.insert(4);
+//        Node res = ll.mergeTwoLists(l1,l2);
+//        while(res.next != null) {
+//            System.out.print(res + " -> ");
+
+        ll.insert(1);
+        ll.insert(2);
+        ll.insert(3);
+        ll.insert(4);
+        ll.insert(5);
+
         ll.show();
-        ll.insertAtStart(23);
-        ll.insertAt(1,16);
-        ll.show();
-        ll.deleteAt(0);
-        ll.show();
+
+
+        }
     }
-}
+
 

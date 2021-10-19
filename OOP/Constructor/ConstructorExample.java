@@ -1,4 +1,4 @@
-package JAVA.OOP.Constructor;
+package OOP.Constructor;
 
 
 class Bicycle {

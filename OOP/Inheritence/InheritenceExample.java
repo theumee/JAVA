@@ -1,4 +1,4 @@
-package JAVA.OOP.Inheritence;
+package OOP.Inheritence;
 
 
 class parent{
@@ -13,9 +13,11 @@ class parent{
 class child extends parent{
     int c;
     void setc(int k){
+
         c = k;
     }
     void displaySum(){
+
         System.out.print(a + b + c);
     }
 }
