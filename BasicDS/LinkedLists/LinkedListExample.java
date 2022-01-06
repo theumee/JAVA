@@ -1,7 +1,6 @@
-package JAVA.BasicDS.LinkedLists;
+package BasicDS.LinkedLists;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedListExample {
     public static void main(String[] args) {

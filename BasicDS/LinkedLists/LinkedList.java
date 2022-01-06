@@ -1,4 +1,4 @@
-package JAVA.BasicDS.LinkedLists;
+package BasicDS.LinkedLists;
 
 class Node{
     int data;

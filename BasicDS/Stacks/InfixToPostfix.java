@@ -1,4 +1,4 @@
-package JAVA.BasicDS.Stacks;
+package BasicDS.Stacks;
 
 import java.util.HashMap;
 import java.util.Scanner;
